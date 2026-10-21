@@ -582,6 +582,13 @@ ul {
   letter-spacing: -0.01em;
 }
 
+.hero-subtitle .dot-sep,
+.dot-sep {
+  color: var(--color-orange);
+  font-weight: 700;
+  margin: 0 4px;
+}
+
 .hero-cta-group {
   display: flex;
   align-items: center;
