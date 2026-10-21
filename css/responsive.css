@@ -1,0 +1,714 @@
+/* ==========================================================================
+   HillVision - Comprehensive Multi-Device Responsive Stylesheet
+   Ensures seamless, smooth, touch-friendly usability across:
+   - Ultra-wide screens (1440px+)
+   - Standard Laptops & Desktops (1025px - 1439px)
+   - Tablets in Landscape & Portrait (768px - 1024px)
+   - Large Mobiles / Phablets (481px - 767px)
+   - Standard Mobiles (360px - 480px, e.g. iPhone, Pixel, Galaxy)
+   - Small Screens (320px - 359px)
+   ========================================================================== */
+
+/* ---------- Mobile Drawer Utilities & Top Bar ---------- */
+.mobile-drawer-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.2rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobile-lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.mobile-search-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--color-green-tint);
+  color: var(--color-primary-green);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.84rem;
+  font-weight: 700;
+  transition: background-color var(--transition-fast);
+}
+
+.mobile-search-btn:hover {
+  background-color: #dceee2;
+}
+
+/* ==========================================================================
+   1. LAPTOPS & MEDIUM DESKTOPS (1024px to 1279px)
+   ========================================================================== */
+@media (max-width: 1279px) {
+  :root {
+    --container-max-width: 1040px;
+  }
+
+  .nav-list {
+    gap: 1.2rem;
+  }
+
+  .hero-title {
+    font-size: 2.45rem;
+  }
+
+  .banner-inner-container {
+    grid-template-columns: 1fr 280px;
+    gap: 1.5rem;
+  }
+
+  .programs-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1.2fr 0.8fr 1fr 1.2fr;
+    gap: 2rem;
+  }
+}
+
+/* ==========================================================================
+   2. TABLETS IN LANDSCAPE & PORTRAIT (768px to 1023px)
+   ========================================================================== */
+@media (max-width: 1023px) {
+  :root {
+    --header-height: 72px;
+  }
+
+  /* Header */
+  .main-nav {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .mobile-drawer {
+    display: block;
+    max-height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hero */
+  .hero-section {
+    min-height: 520px;
+    padding: 3.5rem 0;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-content {
+    max-width: 520px;
+  }
+
+  /* Mission Grid */
+  .mission-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .mission-info {
+    grid-column: 1 / -1;
+    padding-right: 0;
+  }
+
+  .mission-photo-card .photo-frame {
+    height: 100%;
+    min-height: 280px;
+  }
+
+  /* Support Banner */
+  .banner-inner-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .banner-photo-col {
+    height: 180px;
+  }
+
+  /* Impact Section */
+  .impact-layout {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+
+  .impact-intro {
+    padding-right: 0;
+    max-width: 620px;
+  }
+
+  .impact-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .stat-divider {
+    display: none;
+  }
+
+  .stat-card {
+    background-color: var(--color-white);
+    padding: 1.4rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #dce8e0;
+  }
+
+  /* Programs */
+  .programs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Stories */
+  .stories-card {
+    grid-template-columns: 1fr;
+  }
+
+  .story-image-wrap {
+    height: 320px;
+    min-height: 320px;
+  }
+
+  .story-content-wrap {
+    padding: 2.8rem 2.2rem;
+  }
+
+  /* News */
+  .news-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .news-card:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  /* Footer */
+  .footer-columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ==========================================================================
+   3. MOBILE DEVICES & PHABLETS (Max-Width 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  :root {
+    --header-height: 66px;
+  }
+
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  /* Header Elements on Mobile */
+  .header-container {
+    gap: 0.75rem;
+  }
+
+  .brand-logo {
+    gap: 8px;
+  }
+
+  .logo-title {
+    font-size: 1.22rem;
+  }
+
+  .logo-tagline {
+    font-size: 0.62rem;
+  }
+
+  .header-actions {
+    gap: 0.6rem;
+  }
+
+  .btn-donate {
+    padding: 0.42rem 0.95rem;
+    font-size: 0.82rem;
+  }
+
+  /* HERO SECTION - Exact Desktop Banner Mirror (Girl on right, clean text & side-by-side buttons on left) */
+  .hero-section {
+    min-height: 380px;
+    padding: 2.5rem 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg-img {
+    object-position: 72% center;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.86) 44%,
+      rgba(255, 255, 255, 0.3) 68%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .hero-container {
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+  }
+
+  .hero-content {
+    max-width: 60%;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-title {
+    font-size: 1.42rem;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.55rem;
+    color: var(--color-primary-green);
+  }
+
+  .hero-subtitle {
+    font-size: 0.72rem;
+    line-height: 1.38;
+    color: #244a33;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+    flex-wrap: nowrap;
+  }
+
+  .hero-cta-group .btn {
+    width: auto;
+    padding: 0.42rem 0.85rem;
+    font-size: 0.74rem;
+    border-radius: var(--radius-pill);
+    white-space: nowrap;
+  }
+
+  .hero-cta-group .btn-secondary {
+    background-color: var(--color-white);
+    color: var(--color-primary-green);
+    border: 1px solid var(--color-border);
+  }
+
+  /* Mission & Vision Section */
+  .mission-section {
+    padding: 3rem 0;
+  }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .mission-photo-card .photo-frame {
+    aspect-ratio: 16 / 10;
+    min-height: auto;
+    border-radius: var(--radius-md);
+  }
+
+  .vision-box {
+    padding: 1.6rem 1.3rem;
+    border-radius: var(--radius-md);
+  }
+
+  /* Donation CTA Banner */
+  .donation-cta-banner {
+    padding: 2.2rem 0;
+  }
+
+  .banner-inner-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .banner-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .heart-hands-icon {
+    margin: 0 auto;
+  }
+
+  .banner-title {
+    font-size: 1.4rem;
+  }
+
+  .banner-desc {
+    font-size: 0.88rem;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .banner-action-col {
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .banner-donate-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .banner-photo-col {
+    height: 160px;
+    border-radius: var(--radius-md);
+  }
+
+  /* Impact Statistics */
+  .impact-section {
+    padding: 3rem 0;
+  }
+
+  .impact-intro {
+    text-align: center;
+  }
+
+  .impact-intro .section-title {
+    font-size: 1.65rem;
+  }
+
+  .impact-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9rem;
+  }
+
+  .stat-card {
+    padding: 1.1rem 0.9rem;
+    border-radius: var(--radius-md);
+  }
+
+  .stat-number {
+    font-size: 1.7rem;
+  }
+
+  .stat-plus {
+    font-size: 1.4rem;
+  }
+
+  .stat-label {
+    font-size: 0.88rem;
+  }
+
+  .stat-sub {
+    font-size: 0.74rem;
+  }
+
+  /* Programs Section */
+  .programs-section {
+    padding: 3rem 0;
+  }
+
+  .section-top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .programs-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9rem;
+  }
+
+  .program-card {
+    padding: 1.3rem 0.8rem;
+  }
+
+  .program-icon-circle {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 0.8rem;
+  }
+
+  .program-icon-circle svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .program-title {
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .program-desc {
+    font-size: 0.76rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .program-action-hint {
+    opacity: 1;
+    transform: none;
+    font-size: 0.72rem;
+  }
+
+  /* Success Stories Banner */
+  .stories-section {
+    padding: 0 0 3rem 0;
+  }
+
+  .stories-card {
+    border-radius: var(--radius-lg);
+  }
+
+  .story-image-wrap {
+    height: 240px;
+    min-height: 240px;
+  }
+
+  .story-content-wrap {
+    padding: 2rem 1.4rem;
+  }
+
+  .stories-title {
+    font-size: 1.65rem;
+  }
+
+  .stories-text {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .story-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* News Section */
+  .news-section {
+    padding: 3rem 0;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .news-card:nth-child(3) {
+    grid-column: auto;
+  }
+
+  .news-body {
+    padding: 1.2rem 1rem;
+  }
+
+  .news-headline {
+    font-size: 1.05rem;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 3.5rem 0 1.5rem 0;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+  }
+
+  .footer-legal-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  /* Modals */
+  .modal-dialog {
+    max-height: 88vh;
+    border-radius: 18px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .modal-header {
+    padding: 1.2rem 1.2rem 0.8rem 1.2rem;
+  }
+
+  .modal-body {
+    padding: 1.2rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .amounts-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .payment-methods-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .modal-action-bar {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+
+  .modal-action-bar .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   4. STANDARD SMARTPHONES (Max-Width 480px, e.g. iPhone 375px/390px, Galaxy)
+   ========================================================================== */
+@media (max-width: 480px) {
+  /* In tight mobile header, move language selector and search into drawer for a clean look */
+  .lang-selector,
+  .search-trigger-btn {
+    display: none;
+  }
+
+  .logo-title {
+    font-size: 1.15rem;
+  }
+
+  .logo-tagline {
+    display: none;
+  }
+
+  .hero-section {
+    min-height: 330px;
+    padding: 1.8rem 0;
+  }
+
+  .hero-bg-img {
+    object-position: 70% center;
+  }
+
+  .hero-content {
+    max-width: 62%;
+    padding: 0;
+  }
+
+  .hero-title {
+    font-size: 1.2rem;
+    line-height: 1.16;
+    margin-bottom: 0.45rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.62rem;
+    line-height: 1.35;
+    margin-bottom: 0.85rem;
+  }
+
+  .hero-cta-group {
+    gap: 6px;
+  }
+
+  .hero-cta-group .btn {
+    padding: 0.36rem 0.68rem;
+    font-size: 0.68rem;
+  }
+
+  /* Newsletter Group on Small Mobile */
+  .newsletter-input-group {
+    flex-direction: column;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    gap: 8px;
+  }
+
+  .newsletter-input {
+    background-color: var(--color-white);
+    border-radius: var(--radius-pill);
+    padding: 0.72rem 1.2rem;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-subscribe {
+    width: 100%;
+    padding: 0.72rem;
+    border-radius: var(--radius-pill);
+  }
+
+  /* Floating Back to Top Button */
+  .back-to-top-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ==========================================================================
+   5. ULTRA-COMPACT SMARTPHONES (Max-Width 359px, e.g. iPhone SE 1st, Fold Outer)
+   ========================================================================== */
+@media (max-width: 359px) {
+  .hero-title {
+    font-size: 1.05rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.55rem;
+  }
+
+  .hero-cta-group .btn {
+    padding: 0.32rem 0.55rem;
+    font-size: 0.62rem;
+  }
+
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .amounts-grid {
+    grid-template-columns: 1fr;
+  }
+}

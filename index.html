@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HillVision - Empowering People, Building Sustainable Communities</title>
+  <meta name="description" content="HillVision is a nonprofit organization dedicated to education, healthcare, livelihoods, and sustainable development for hill communities.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="#hero" class="brand-logo" aria-label="HillVision Home">
+        <div class="logo-symbol">
+          <i class="fa-solid fa-sun" style="font-size: 28px; color: #F26922;"></i>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-title">HillVision</span>
+          <span class="logo-tagline" data-i18n="tagline">We Rise Together</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="main-nav" id="main-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active" data-nav="hero" data-i18n="nav_home">Home</a></li>
+          <li class="nav-item"><a href="#mission" class="nav-link" data-nav="mission" data-i18n="nav_about">About</a></li>
+          <li class="nav-item"><a href="#programs" class="nav-link" data-nav="programs" data-i18n="nav_programs">Programs</a></li>
+          <li class="nav-item"><a href="#impact" class="nav-link" data-nav="impact" data-i18n="nav_impact">Impact</a></li>
+          <li class="nav-item"><a href="#stories" class="nav-link" data-nav="stories" data-i18n="nav_involved">Get Involved</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <!-- Language Switcher -->
+        <div class="lang-selector">
+          <button type="button" class="lang-btn active" id="lang-en" aria-label="Switch to English">EN</button>
+          <span class="lang-sep">|</span>
+          <button type="button" class="lang-btn" id="lang-bn" aria-label="Switch to Bengali">বাংলা</button>
+        </div>
+
+        <!-- Search Trigger Button -->
+        <button type="button" class="search-trigger-btn" id="search-open-btn" aria-label="Open search dialog">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <!-- Prominent Orange Donate Button -->
+        <button type="button" class="btn btn-donate open-donate-modal" id="header-donate-btn" data-i18n="btn_donate">
+          Donate
+        </button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <div class="mobile-drawer-inner">
+        <div class="mobile-drawer-top-bar">
+          <div class="mobile-lang-selector">
+            <button type="button" class="lang-btn active mobile-lang-btn" id="mobile-lang-en" aria-label="Switch to English">EN</button>
+            <span class="lang-sep">|</span>
+            <button type="button" class="lang-btn mobile-lang-btn" id="mobile-lang-bn" aria-label="Switch to Bengali">বাংলা</button>
+          </div>
+          <button type="button" class="mobile-search-btn" id="mobile-search-open-btn" aria-label="Search HillVision">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search</span>
+          </button>
+        </div>
+        <ul class="mobile-nav-list">
+          <li><a href="#hero" class="mobile-nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="#mission" class="mobile-nav-link" data-i18n="nav_about">About</a></li>
+          <li><a href="#programs" class="mobile-nav-link" data-i18n="nav_programs">Programs</a></li>
+          <li><a href="#impact" class="mobile-nav-link" data-i18n="nav_impact">Impact</a></li>
+          <li><a href="#stories" class="mobile-nav-link" data-i18n="nav_involved">Get Involved</a></li>
+          <li><a href="#news" class="mobile-nav-link" data-i18n="nav_news">News & Updates</a></li>
+        </ul>
+        <div class="mobile-drawer-footer">
+          <button type="button" class="btn btn-primary btn-block open-donate-modal" data-i18n="btn_donate_now">
+            Donate Now <span class="btn-arrow">&rarr;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-layer" aria-hidden="true">
+        <img src="assets/images/hero-banner.jpg" alt="Lush green hill tracts landscape with smiling schoolchild" class="hero-bg-img" id="hero-bg-img" onerror="this.onerror=null; this.src='image/hero-banner.jpg';">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title" data-i18n="hero_title">
+            Empowering People<br>
+            Building Sustainable<br>
+            Communities
+          </h1>
+          <p class="hero-subtitle" data-i18n="hero_subtitle">
+            Education • Healthcare • Livelihoods • Sustainable Development
+          </p>
+          <div class="hero-cta-group">
+            <button type="button" class="btn btn-primary open-donate-modal" id="hero-donate-btn" data-i18n="hero_btn_donate">
+              Donate Now <span class="btn-arrow">&rarr;</span>
+            </button>
+            <a href="#mission" class="btn btn-secondary" id="hero-learn-btn" data-i18n="hero_btn_learn">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MISSION AND VISION SECTION ==================== -->
+    <section class="mission-section" id="mission">
+      <div class="container">
+        <div class="mission-grid">
+          
+          <!-- Column 1: Our Mission -->
+          <div class="mission-card mission-info">
+            <span class="section-kicker" data-i18n="mission_kicker">About HillVision</span>
+            <h2 class="section-title" data-i18n="mission_title">Our Mission</h2>
+            <p class="section-text" data-i18n="mission_desc">
+              We work with underserved, disadvantaged and marginalized people and communities to create opportunities in education, healthcare, skills development, livelihoods, entrepreneurship and sustainable development.
+            </p>
+            <a href="#programs" class="inline-arrow-link" data-modal="mission-modal" data-i18n="learn_more">
+              Learn More <span class="link-arrow">&rarr;</span>
+            </a>
+          </div>
+
+          <!-- Column 2: Center Community Photo -->
+          <div class="mission-card mission-photo-card">
+            <div class="photo-frame">
+              <img src="assets/images/mission-children.jpg" alt="Smiling children in a rural hill community school" class="mission-img" onerror="this.onerror=null; this.src='image/mission-children.jpg';">
+            </div>
+          </div>
+
+          <!-- Column 3: Pale Green Vision Card -->
+          <div class="mission-card vision-box">
+            <div class="vision-icon-wrap" aria-hidden="true">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <h3 class="vision-title" data-i18n="vision_title">Our Vision</h3>
+            <p class="vision-text" data-i18n="vision_desc">
+              We want to build a sustainable and prosperous society where every person and community has chances to learn, grow, move forward and build a better future.
+            </p>
+            <a href="#impact" class="inline-arrow-link vision-link" data-modal="vision-modal" data-i18n="learn_more">
+              Learn More <span class="link-arrow">&rarr;</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DONATION CALL-TO-ACTION BANNER ==================== -->
+    <section class="donation-cta-banner" id="donate-banner">
+      <div class="container banner-inner-container">
+        <div class="banner-content">
+          <!-- Heart in hands icon -->
+          <div class="banner-icon-col" aria-hidden="true">
+            <div class="heart-hands-icon">
+              <i class="fa-solid fa-hand-holding-heart"></i>
+            </div>
+          </div>
+
+          <div class="banner-text-col">
+            <h2 class="banner-title" data-i18n="cta_title">Support Our Work</h2>
+            <p class="banner-desc" data-i18n="cta_desc">
+              Your donation helps create real opportunities for people in need. Together we can build a better tomorrow.
+            </p>
+          </div>
+
+          <div class="banner-action-col">
+            <button type="button" class="btn btn-primary banner-donate-btn open-donate-modal" data-i18n="hero_btn_donate">
+              Donate Now <span class="btn-arrow">&rarr;</span>
+            </button>
+            <span class="banner-trust-note" data-i18n="cta_trust">Safe • Transparent • Impactful</span>
+          </div>
+        </div>
+
+        <div class="banner-photo-col">
+          <img src="assets/images/cta-children.jpg" alt="Children holding school books in mountain community" class="banner-children-img" onerror="this.onerror=null; this.src='image/cta-children.jpg';">
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== IMPACT STATISTICS SECTION ==================== -->
+    <section class="impact-section" id="impact">
+      <div class="container">
+        <div class="impact-layout">
+          
+          <!-- Left Intro Column -->
+          <div class="impact-intro">
+            <span class="section-kicker" data-i18n="impact_kicker">Our Impact</span>
+            <h2 class="section-title" data-i18n="impact_title">Growing Together</h2>
+            <p class="section-text" data-i18n="impact_desc">
+              Real change happens when people get the right support. We work across multiple sectors to create lasting impact.
+            </p>
+          </div>
+
+          <!-- Right 4 Stats Column Row -->
+          <div class="impact-stats-grid">
+            
+            <!-- Stat 1 -->
+            <div class="stat-card">
+              <div class="stat-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="12500">0</span><span class="stat-plus">+</span>
+              </div>
+              <h3 class="stat-label" data-i18n="stat_1_label">Children Educated</h3>
+              <p class="stat-sub" data-i18n="stat_1_sub">Free education up to SSC</p>
+            </div>
+
+            <div class="stat-divider" aria-hidden="true"></div>
+
+            <!-- Stat 2 -->
+            <div class="stat-card">
+              <div class="stat-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-hand-holding-medical"></i>
+              </div>
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="8000">0</span><span class="stat-plus">+</span>
+              </div>
+              <h3 class="stat-label" data-i18n="stat_2_label">People Reached</h3>
+              <p class="stat-sub" data-i18n="stat_2_sub">Healthcare & medical camps</p>
+            </div>
+
+            <div class="stat-divider" aria-hidden="true"></div>
+
+            <!-- Stat 3 -->
+            <div class="stat-card">
+              <div class="stat-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="3200">0</span><span class="stat-plus">+</span>
+              </div>
+              <h3 class="stat-label" data-i18n="stat_3_label">Families Supported</h3>
+              <p class="stat-sub" data-i18n="stat_3_sub">Livelihoods & training</p>
+            </div>
+
+            <div class="stat-divider" aria-hidden="true"></div>
+
+            <!-- Stat 4 -->
+            <div class="stat-card">
+              <div class="stat-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="50">0</span><span class="stat-plus">+</span>
+              </div>
+              <h3 class="stat-label" data-i18n="stat_4_label">Staff & Volunteers</h3>
+              <p class="stat-sub" data-i18n="stat_4_sub">Working together</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROGRAMS SECTION ==================== -->
+    <section class="programs-section" id="programs">
+      <div class="container">
+        
+        <div class="section-top-bar">
+          <div>
+            <span class="section-kicker" data-i18n="prog_kicker">Our Programs</span>
+            <h2 class="section-title" data-i18n="prog_title">Key Areas of Work</h2>
+          </div>
+          <a href="#programs" class="view-all-link" id="view-all-programs-btn" data-i18n="view_all_programs">
+            View All Programs <span class="link-arrow">&rarr;</span>
+          </a>
+        </div>
+
+        <div class="programs-grid">
+          
+          <!-- Program 1: Education -->
+          <div class="program-card" data-program-id="education" tabindex="0" role="button" aria-label="Learn more about Education Program">
+            <div class="program-icon-circle icon-orange">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3 class="program-title" data-i18n="prog_edu_title">Education</h3>
+            <p class="program-desc" data-i18n="prog_edu_desc">Quality learning for a brighter future</p>
+            <span class="program-action-hint">Explore &rarr;</span>
+          </div>
+
+          <!-- Program 2: Healthcare -->
+          <div class="program-card" data-program-id="healthcare" tabindex="0" role="button" aria-label="Learn more about Healthcare Program">
+            <div class="program-icon-circle icon-green">
+              <i class="fa-solid fa-notes-medical"></i>
+            </div>
+            <h3 class="program-title" data-i18n="prog_health_title">Healthcare</h3>
+            <p class="program-desc" data-i18n="prog_health_desc">Better health, stronger communities</p>
+            <span class="program-action-hint">Explore &rarr;</span>
+          </div>
+
+          <!-- Program 3: Skills Development -->
+          <div class="program-card" data-program-id="skills" tabindex="0" role="button" aria-label="Learn more about Skills Development Program">
+            <div class="program-icon-circle icon-amber">
+              <i class="fa-solid fa-gears"></i>
+            </div>
+            <h3 class="program-title" data-i18n="prog_skills_title">Skills Development</h3>
+            <p class="program-desc" data-i18n="prog_skills_desc">Practical skills for independence</p>
+            <span class="program-action-hint">Explore &rarr;</span>
+          </div>
+
+          <!-- Program 4: Livelihoods -->
+          <div class="program-card" data-program-id="livelihoods" tabindex="0" role="button" aria-label="Learn more about Livelihoods Program">
+            <div class="program-icon-circle icon-lime">
+              <i class="fa-solid fa-wheat-awn"></i>
+            </div>
+            <h3 class="program-title" data-i18n="prog_live_title">Livelihoods</h3>
+            <p class="program-desc" data-i18n="prog_live_desc">Sustainable income for lasting change</p>
+            <span class="program-action-hint">Explore &rarr;</span>
+          </div>
+
+          <!-- Program 5: Entrepreneurship -->
+          <div class="program-card" data-program-id="entrepreneurship" tabindex="0" role="button" aria-label="Learn more about Entrepreneurship Program">
+            <div class="program-icon-circle icon-coral">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <h3 class="program-title" data-i18n="prog_ent_title">Entrepreneurship</h3>
+            <p class="program-desc" data-i18n="prog_ent_desc">Ideas into opportunities</p>
+            <span class="program-action-hint">Explore &rarr;</span>
+          </div>
+
+          <!-- Program 6: Sustainable Development -->
+          <div class="program-card" data-program-id="sustainability" tabindex="0" role="button" aria-label="Learn more about Sustainable Development Program">
+            <div class="program-icon-circle icon-teal">
+              <i class="fa-solid fa-earth-americas"></i>
+            </div>
+            <h3 class="program-title" data-i18n="prog_sust_title">Sustainable Development</h3>
+            <p class="program-desc" data-i18n="prog_sust_desc">For a greener, healthier planet</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SUCCESS STORIES BANNER ==================== -->
+    <section class="stories-section" id="stories">
+      <div class="container">
+        <div class="stories-card">
+          
+          <!-- Left: Large Image of schoolchild -->
+          <div class="story-image-wrap">
+            <img src="assets/images/story-child.jpg" alt="Inspiring hill school girl smiling with hope against lush mountains" class="story-child-img" onerror="this.onerror=null; this.src='image/story-child.jpg';">
+          </div>
+
+          <!-- Right: Cream Background Content Box -->
+          <div class="story-content-wrap">
+            <span class="section-kicker" data-i18n="stories_kicker">Our Stories</span>
+            <h2 class="section-title stories-title" data-i18n="stories_title">Hope in Every Step</h2>
+            <p class="stories-text" data-i18n="stories_desc">
+              From classroom to community, from small dreams to big achievements — our stories show what's possible when people get the right support.
+            </p>
+            <button type="button" class="btn btn-outline story-btn" id="read-story-btn" data-i18n="btn_read_stories">
+              Read More Stories <span class="btn-arrow">&rarr;</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NEWS AND UPDATES SECTION ==================== -->
+    <section class="news-section" id="news">
+      <div class="container">
+        
+        <div class="section-top-bar">
+          <div>
+            <span class="section-kicker" data-i18n="news_kicker">Latest News</span>
+            <h2 class="section-title" data-i18n="news_title">News & Updates</h2>
+          </div>
+          <a href="#news" class="view-all-link" id="view-all-news-btn" data-i18n="view_all_news">
+            View All News <span class="link-arrow">&rarr;</span>
+          </a>
+        </div>
+
+        <div class="news-grid">
+          
+          <!-- Article 1 -->
+          <article class="news-card" data-article-id="news-1">
+            <div class="news-thumb-wrap">
+              <img src="assets/images/news-classroom.jpg" alt="Children learning in a new campus classroom" class="news-thumb" onerror="this.onerror=null; this.src='image/news-classroom.jpg';">
+            </div>
+            <div class="news-body">
+              <time class="news-date" datetime="2026-10-10">10 Oct 2026</time>
+              <h3 class="news-headline">
+                <a href="#news" class="news-link-title" data-article-id="news-1" data-i18n="news_1_title">New Learning Campus Opens in Hill District</a>
+              </h3>
+              <p class="news-excerpt" data-i18n="news_1_desc">
+                A new learning campus is now serving 120 children from remote hill communities.
+              </p>
+              <button type="button" class="news-read-more" data-article-id="news-1">
+                <span data-i18n="read_more">Read More</span> <span class="link-arrow">&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="news-card" data-article-id="news-2">
+            <div class="news-thumb-wrap">
+              <img src="assets/images/news-health.jpg" alt="Doctor examining child during medical outreach camp" class="news-thumb" onerror="this.onerror=null; this.src='image/news-health.jpg';">
+            </div>
+            <div class="news-body">
+              <time class="news-date" datetime="2026-10-05">05 Oct 2026</time>
+              <h3 class="news-headline">
+                <a href="#news" class="news-link-title" data-article-id="news-2" data-i18n="news_2_title">Free Health Camp Reaches 500+ People</a>
+              </h3>
+              <p class="news-excerpt" data-i18n="news_2_desc">
+                Our mobile health team provided checkups, medicines and health awareness.
+              </p>
+              <button type="button" class="news-read-more" data-article-id="news-2">
+                <span data-i18n="read_more">Read More</span> <span class="link-arrow">&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="news-card" data-article-id="news-3">
+            <div class="news-thumb-wrap">
+              <img src="assets/images/news-training.jpg" alt="Women practicing tailoring and handicrafts in workshop" class="news-thumb" onerror="this.onerror=null; this.src='image/news-training.jpg';">
+            </div>
+            <div class="news-body">
+              <time class="news-date" datetime="2026-09-28">28 Sep 2026</time>
+              <h3 class="news-headline">
+                <a href="#news" class="news-link-title" data-article-id="news-3" data-i18n="news_3_title">Vocational Training Expands for Women</a>
+              </h3>
+              <p class="news-excerpt" data-i18n="news_3_desc">
+                New batch of tailoring and handicraft training begins this month.
+              </p>
+              <button type="button" class="news-read-more" data-article-id="news-3">
+                <span data-i18n="read_more">Read More</span> <span class="link-arrow">&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      
+      <div class="footer-columns">
+        
+        <!-- Column 1: Organization Profile -->
+        <div class="footer-col col-brand">
+          <div class="footer-logo">
+            <i class="fa-solid fa-sun" style="font-size: 26px; color: #F26922;"></i>
+            <div class="footer-logo-text">
+              <span class="footer-title">HillVision</span>
+              <span class="footer-tagline" data-i18n="tagline">We Rise Together</span>
+            </div>
+          </div>
+          <p class="footer-mission-text" data-i18n="footer_desc">
+            Together we create opportunities, stronger communities and a better tomorrow.
+          </p>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h3 class="footer-heading" data-i18n="footer_quick_links">Quick Links</h3>
+          <ul class="footer-link-list">
+            <li><a href="#mission" class="footer-link" data-i18n="nav_about">About Us</a></li>
+            <li><a href="#programs" class="footer-link" data-i18n="nav_programs">Programs</a></li>
+            <li><a href="#impact" class="footer-link" data-i18n="nav_impact">Impact</a></li>
+            <li><a href="#news" class="footer-link" data-i18n="nav_news">News</a></li>
+            <li><a href="#contact" class="footer-link" data-i18n="footer_contact_link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Us -->
+        <div class="footer-col">
+          <h3 class="footer-heading" data-i18n="footer_contact_us">Contact Us</h3>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Khagrachari, Chittagong, Bangladesh</span>
+            </li>
+            <li class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:info@hillvision.org" class="contact-link">info@hillvision.org</a>
+            </li>
+            <li class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+8801631631564" class="contact-link">+880 1631-631564</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Newsletter -->
+        <div class="footer-col col-newsletter">
+          <h3 class="footer-heading" data-i18n="footer_newsletter_title">Newsletter</h3>
+          <p class="newsletter-sub" data-i18n="footer_newsletter_sub">Get updates on our work and impact.</p>
+          <form class="newsletter-form" id="newsletter-form" novalidate>
+            <div class="newsletter-input-group">
+              <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Your email address" aria-label="Email address for newsletter" required>
+              <button type="submit" class="btn btn-subscribe" id="newsletter-btn" data-i18n="btn_subscribe">Subscribe</button>
+            </div>
+            <div class="form-feedback" id="newsletter-feedback" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Sub-Footer Bar -->
+      <div class="footer-bottom-bar">
+        <p class="copyright-text" data-i18n="footer_copy">&copy; 2026 HillVision. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#privacy" class="legal-link" id="link-privacy">Privacy</a>
+          <span class="legal-sep">|</span>
+          <a href="#terms" class="legal-link" id="link-terms">Terms</a>
+          <span class="legal-sep">|</span>
+          <a href="#contact" class="legal-link">Contact</a>
+          <span class="legal-sep">|</span>
+          <span class="footer-lang-status">EN | বাংলা</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== INTERACTIVE MODALS ==================== -->
+
+  <!-- 1. DONATION MODAL -->
+  <div class="modal-backdrop" id="donate-modal" aria-hidden="true" role="dialog" aria-labelledby="donate-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-kicker">Make a Difference</span>
+          <h2 class="modal-title" id="donate-modal-title">Donate to HillVision</h2>
+        </div>
+        <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="donation-demo-notice">
+          <span class="notice-badge">Demo Mode</span>
+          <span>This is an interactive frontend demonstration. No actual funds are charged.</span>
+        </div>
+
+        <form id="donation-form" novalidate>
+          <!-- Donation Frequency -->
+          <div class="form-group">
+            <label class="form-label">Frequency</label>
+            <div class="radio-pill-group">
+              <label class="radio-pill active">
+                <input type="radio" name="freq" value="once" checked> One-Time
+              </label>
+              <label class="radio-pill">
+                <input type="radio" name="freq" value="monthly"> Monthly
+              </label>
+            </div>
+          </div>
+
+          <!-- Selectable Preset Amounts -->
+          <div class="form-group">
+            <label class="form-label">Select Amount (BDT)</label>
+            <div class="amounts-grid">
+              <button type="button" class="amount-btn" data-amount="500">৳500</button>
+              <button type="button" class="amount-btn active" data-amount="1000">৳1,000</button>
+              <button type="button" class="amount-btn" data-amount="2500">৳2,500</button>
+              <button type="button" class="amount-btn" data-amount="5000">৳5,000</button>
+            </div>
+            <div class="custom-amount-wrap">
+              <span class="currency-prefix">৳</span>
+              <input type="number" id="custom-amount" class="form-input custom-input" placeholder="Custom amount" min="50" step="50">
+            </div>
+          </div>
+
+          <!-- Donor Details -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="donor-name" class="form-label">Full Name *</label>
+              <input type="text" id="donor-name" class="form-input" placeholder="e.g. John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="donor-email" class="form-label">Email Address *</label>
+              <input type="email" id="donor-email" class="form-input" placeholder="name@example.com" required>
+            </div>
+          </div>
+
+          <!-- Payment Method Choice -->
+          <div class="form-group">
+            <label class="form-label">Payment Gateway</label>
+            <div class="payment-methods-grid">
+              <label class="payment-pill active">
+                <input type="radio" name="payment_method" value="bkash" checked>
+                <span>bKash</span>
+              </label>
+              <label class="payment-pill">
+                <input type="radio" name="payment_method" value="nagad">
+                <span>Nagad</span>
+              </label>
+              <label class="payment-pill">
+                <input type="radio" name="payment_method" value="card">
+                <span>Credit/Debit Card</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="donation-form-footer">
+            <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-donation-btn">
+              Complete Donation <span id="donate-submit-amount">৳1,000</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Simulated Donation Receipt -->
+        <div class="donation-success-panel" id="donation-success-panel" style="display: none;">
+          <div class="success-icon-badge">✓</div>
+          <h3>Thank you for your generous support!</h3>
+          <p>Your contribution creates direct opportunities for education, healthcare, and sustainable living in hill communities.</p>
+          <div class="receipt-card">
+            <div><strong>Transaction Reference:</strong> <span id="receipt-ref">HV-84920</span></div>
+            <div><strong>Donor:</strong> <span id="receipt-donor">Guest</span></div>
+            <div><strong>Amount:</strong> <span id="receipt-amount">৳1,000</span></div>
+            <div><strong>Status:</strong> <span class="badge-success">Demo Completed</span></div>
+          </div>
+          <button type="button" class="btn btn-secondary modal-close-btn-secondary" style="margin-top: 1rem;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. SEARCH MODAL -->
+  <div class="modal-backdrop" id="search-modal" aria-hidden="true" role="dialog" aria-labelledby="search-modal-title">
+    <div class="modal-dialog modal-dialog-lg">
+      <div class="modal-header">
+        <h2 class="modal-title" id="search-modal-title">Search HillVision</h2>
+        <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="search-input-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="live-search-input" class="search-input" placeholder="Search programs, impact, news, education, healthcare..." autocomplete="off">
+        </div>
+        <div class="search-results-list" id="search-results-list">
+          <p class="search-hint">Type a keyword above to find programs, initiatives, and recent news.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. PROGRAM DETAILS MODAL -->
+  <div class="modal-backdrop" id="program-modal" aria-hidden="true" role="dialog" aria-labelledby="program-modal-title">
+    <div class="modal-dialog modal-dialog-lg">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-kicker" id="program-modal-kicker">Program Details</span>
+          <h2 class="modal-title" id="program-modal-title">Program Title</h2>
+        </div>
+        <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="program-modal-content" id="program-modal-content">
+          <!-- Dynamic details filled by JavaScript -->
+        </div>
+        <div class="modal-action-bar">
+          <button type="button" class="btn btn-primary open-donate-modal" data-i18n="hero_btn_donate">Support This Program &rarr;</button>
+          <button type="button" class="btn btn-secondary modal-close-btn-secondary">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. NEWS & STORY ARTICLE MODAL -->
+  <div class="modal-backdrop" id="article-modal" aria-hidden="true" role="dialog" aria-labelledby="article-modal-title">
+    <div class="modal-dialog modal-dialog-lg">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-kicker" id="article-modal-date">Publication Date</span>
+          <h2 class="modal-title" id="article-modal-title">Article Headline</h2>
+        </div>
+        <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="article-modal-image-wrap">
+          <img id="article-modal-img" src="" alt="Article photo" class="article-modal-img">
+        </div>
+        <div class="article-modal-body" id="article-modal-body">
+          <!-- Dynamic article text -->
+        </div>
+        <div class="modal-action-bar">
+          <button type="button" class="btn btn-secondary modal-close-btn-secondary">Back to News</button>
+          <button type="button" class="btn btn-primary open-donate-modal">Donate in Support &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. POLICY / TERMS MODAL -->
+  <div class="modal-backdrop" id="policy-modal" aria-hidden="true" role="dialog" aria-labelledby="policy-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2 class="modal-title" id="policy-modal-title">Policy Information</h2>
+        <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="policy-modal-body" class="policy-body">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Floating Button -->
+  <button type="button" class="back-to-top-btn" id="back-to-top" aria-label="Scroll back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
