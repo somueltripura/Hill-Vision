@@ -308,6 +308,23 @@ ul {
   gap: 10px;
   text-decoration: none;
   flex-shrink: 0;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  padding: 4px 6px;
+  margin-left: -6px;
+  border-radius: 8px;
+}
+
+.brand-logo:hover {
+  transform: translateY(-1px);
+}
+
+.brand-logo:active {
+  transform: scale(0.97);
+}
+
+.brand-logo:focus-visible {
+  outline: 2px solid var(--color-orange);
+  outline-offset: 4px;
 }
 
 .logo-symbol {
@@ -316,9 +333,25 @@ ul {
   justify-content: center;
 }
 
+.top-logo {
+  width: 48px;
+  height: 38px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.12));
+  will-change: transform, filter;
+}
+
+
 .logo-text-group {
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.brand-logo:hover .logo-text-group {
+  transform: translateX(2px);
 }
 
 .logo-title {
@@ -328,6 +361,12 @@ ul {
   color: var(--color-primary-green);
   letter-spacing: -0.02em;
   line-height: 1.1;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.brand-logo:hover .logo-title {
+  color: var(--color-primary-green-dark);
+  text-shadow: 0 0 10px rgba(45, 90, 61, 0.15);
 }
 
 .logo-tagline {
@@ -337,6 +376,12 @@ ul {
   letter-spacing: 0.05em;
   text-transform: capitalize;
   line-height: 1.2;
+  transition: color 0.3s ease, letter-spacing 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.brand-logo:hover .logo-tagline {
+  color: #ff7e2e;
+  letter-spacing: 0.09em;
 }
 
 /* Main Navigation */
@@ -1188,15 +1233,33 @@ ul {
 }
 
 .footer-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 1rem;
+  cursor: pointer;
+  width: fit-content;
+  text-decoration: none;
+  position: relative;
+  padding: 4px 6px;
+  margin-left: -6px;
+  border-radius: 8px;
+}
+
+.footer-logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .footer-logo-text {
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover .footer-logo-text {
+  transform: translateX(2px);
 }
 
 .footer-title {
@@ -1205,6 +1268,12 @@ ul {
   font-weight: 800;
   color: var(--color-white);
   line-height: 1.1;
+  transition: color 0.3s ease, text-shadow 0.35s ease;
+}
+
+.footer-logo:hover .footer-title {
+  color: #ffffff;
+  text-shadow: 0 0 16px rgba(242, 105, 34, 0.4), 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 .footer-tagline {
@@ -1212,6 +1281,12 @@ ul {
   font-weight: 600;
   color: var(--color-orange);
   letter-spacing: 0.05em;
+  transition: color 0.3s ease, letter-spacing 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.3s ease;
+}
+
+.footer-logo:hover .footer-tagline {
+  color: #ff914d;
+  letter-spacing: 0.1em;
 }
 
 .footer-mission-text {
